@@ -1,10 +1,15 @@
-import React from "react";
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './assets/css/app.css';
+import HomePage from 'pages/HomePage';
 
 function App() {
-  return ( <div className = "App" >
-    <h1 className="text-xl text"> LUXME </h1> 
-    </div>
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+      </Routes>
+    </Router>
   );
 }
 
